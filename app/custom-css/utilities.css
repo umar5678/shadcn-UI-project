@@ -1,0 +1,18 @@
+.container {
+  max-width: 1300px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+button,
+input {
+  padding: 5px 14px;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+  margin: 10px 0 8px 0;
+}
+
+button:hover {
+  background-color: rgb(224, 224, 224);
+}

@@ -1,0 +1,688 @@
+/* CSS Debug Toolkit - Enhanced Version */
+
+/* Base reset to avoid layout interference */
+* {
+  box-sizing: border-box;
+}
+
+/* 
+ * ENHANCED COLOR CYCLING FOR ELEMENTS
+ * - Uses rgba for semi-transparency
+ * - Includes depth-based shading system
+ * - Expanded element support
+ */
+
+/* First level elements - lightest shade */
+div,
+section,
+article,
+header,
+footer,
+main,
+aside,
+nav,
+form,
+fieldset,
+ul,
+ol,
+table,
+figure,
+details,
+summary {
+  position: relative;
+  margin: 2px;
+}
+
+/* Depth-based background shading system (lighter to darker by nesting level) */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ):not(:has(*)) {
+  background-color: rgba(240, 240, 240, 0.3);
+  border: 1px dashed rgba(180, 180, 180, 0.8);
+}
+
+/* First level of nesting */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ) {
+  background-color: rgba(220, 220, 220, 0.3);
+  border: 1px dashed rgba(160, 160, 160, 0.8);
+}
+
+/* Second level of nesting */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ) {
+  background-color: rgba(200, 200, 200, 0.3);
+  border: 1px dashed rgba(140, 140, 140, 0.8);
+}
+
+/* Third level of nesting and beyond */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ) {
+  background-color: rgba(180, 180, 180, 0.3);
+  border: 1px dashed rgba(120, 120, 120, 0.8);
+}
+
+/* Very deep nesting */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ) {
+  background-color: rgba(160, 160, 160, 0.3);
+  border: 1px dashed rgba(100, 100, 100, 0.8);
+}
+
+/* Extremely deep nesting */
+:is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  )
+  :is(
+    div,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    nav,
+    form,
+    fieldset,
+    ul,
+    ol,
+    table,
+    figure,
+    details,
+    summary
+  ) {
+  background-color: rgba(140, 140, 140, 0.3);
+  border: 1px dashed rgba(80, 80, 80, 0.8);
+}
+
+/* Color cycling for special elements */
+div:nth-child(6n + 1),
+section:nth-child(6n + 1),
+article:nth-child(6n + 1),
+header:nth-child(6n + 1),
+footer:nth-child(6n + 1),
+main:nth-child(6n + 1),
+aside:nth-child(6n + 1),
+nav:nth-child(6n + 1),
+form:nth-child(6n + 1),
+fieldset:nth-child(6n + 1) {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 2px solid rgba(255, 0, 0, 0.4);
+}
+
+div:nth-child(6n + 2),
+section:nth-child(6n + 2),
+article:nth-child(6n + 2),
+header:nth-child(6n + 2),
+footer:nth-child(6n + 2),
+main:nth-child(6n + 2),
+aside:nth-child(6n + 2),
+nav:nth-child(6n + 2),
+form:nth-child(6n + 2),
+fieldset:nth-child(6n + 2) {
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 2px solid rgba(0, 255, 0, 0.4);
+}
+
+div:nth-child(6n + 3),
+section:nth-child(6n + 3),
+article:nth-child(6n + 3),
+header:nth-child(6n + 3),
+footer:nth-child(6n + 3),
+main:nth-child(6n + 3),
+aside:nth-child(6n + 3),
+nav:nth-child(6n + 3),
+form:nth-child(6n + 3),
+fieldset:nth-child(6n + 3) {
+  background-color: rgba(0, 0, 255, 0.1);
+  border: 2px solid rgba(0, 0, 255, 0.4);
+}
+
+div:nth-child(6n + 4),
+section:nth-child(6n + 4),
+article:nth-child(6n + 4),
+header:nth-child(6n + 4),
+footer:nth-child(6n + 4),
+main:nth-child(6n + 4),
+aside:nth-child(6n + 4),
+nav:nth-child(6n + 4),
+form:nth-child(6n + 4),
+fieldset:nth-child(6n + 4) {
+  background-color: rgba(255, 255, 0, 0.1);
+  border: 2px solid rgba(255, 255, 0, 0.4);
+}
+
+div:nth-child(6n + 5),
+section:nth-child(6n + 5),
+article:nth-child(6n + 5),
+header:nth-child(6n + 5),
+footer:nth-child(6n + 5),
+main:nth-child(6n + 5),
+aside:nth-child(6n + 5),
+nav:nth-child(6n + 5),
+form:nth-child(6n + 5),
+fieldset:nth-child(6n + 5) {
+  background-color: rgba(0, 255, 255, 0.1);
+  border: 2px solid rgba(0, 255, 255, 0.4);
+}
+
+div:nth-child(6n + 6),
+section:nth-child(6n + 6),
+article:nth-child(6n + 6),
+header:nth-child(6n + 6),
+footer:nth-child(6n + 6),
+main:nth-child(6n + 6),
+aside:nth-child(6n + 6),
+nav:nth-child(6n + 6),
+form:nth-child(6n + 6),
+fieldset:nth-child(6n + 6) {
+  background-color: rgba(255, 0, 255, 0.1);
+  border: 2px solid rgba(255, 0, 255, 0.4);
+}
+
+/* Enhanced label overlays for all elements */
+div::before,
+section::before,
+article::before,
+header::before,
+footer::before,
+main::before,
+aside::before,
+nav::before,
+form::before,
+fieldset::before,
+ul::before,
+ol::before,
+table::before,
+figure::before,
+details::before,
+summary::before {
+  content: attr(data-debug-tag, "<" + local-name() + ">");
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2px 5px;
+  z-index: 9999;
+  font-family: monospace;
+  pointer-events: none;
+  border-radius: 0 0 4px 0;
+}
+
+/* Additional text elements highlighting */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a {
+  position: relative;
+  border: 1px dotted rgba(100, 100, 100, 0.5);
+  background: rgba(245, 245, 245, 0.2);
+  padding: 1px;
+}
+
+/* Label for text elements */
+p::before,
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+span::before,
+a::before {
+  content: "<" attr(data-debug-tag, local-name()) ">";
+  font-size: 9px;
+  background: rgba(50, 50, 50, 0.6);
+  color: white;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 1px 3px;
+  border-radius: 2px;
+  z-index: 9999;
+  font-family: monospace;
+  pointer-events: none;
+}
+
+/* Target empty elements with special highlight */
+:empty {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 0, 0, 0.1) 10px,
+    rgba(255, 255, 0, 0.1) 10px,
+    rgba(255, 255, 0, 0.1) 20px
+  ) !important;
+  min-height: 10px;
+  min-width: 10px;
+}
+
+/* Grid highlighting */
+.grid,
+[class*="grid"],
+[class*="container"],
+.container {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 20px,
+    rgba(0, 0, 255, 0.03) 20px,
+    rgba(0, 0, 255, 0.03) 21px
+  ) !important;
+}
+
+/* Flex container highlighting */
+[style*="display: flex"],
+[style*="display:flex"],
+.flex,
+[class*="flex-"] {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    rgba(0, 128, 0, 0.03) 20px,
+    rgba(0, 128, 0, 0.03) 21px
+  ) !important;
+}
+
+/* Indicator for debug mode */
+html::after {
+  content: "Debug CSS Active";
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #f44336;
+  color: white;
+  padding: 4px 8px;
+  font-size: 10px;
+  z-index: 99999;
+  font-family: monospace;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* JS Script to automatically add tag names to data-debug-tag attributes */
+html::before {
+  content: "";
+  display: none;
+}
+
+/* Insert through JS or copy this script tag into your HTML:
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('div, section, article, header, footer, main, aside, nav, form, fieldset, ul, ol, table, figure, details, summary, p, h1, h2, h3, h4, h5, h6, span, a');
+    elements.forEach(el => {
+      // Add tag name and optional class for debugging
+      let debugText = el.tagName.toLowerCase();
+      if (el.id) debugText += '#' + el.id;
+      if (el.className && typeof el.className === 'string') {
+        const mainClass = el.className.split(' ')[0];
+        if (mainClass) debugText += '.' + mainClass;
+      }
+      el.setAttribute('data-debug-tag', debugText);
+      
+      // Add depth information
+      let depth = 0;
+      let parent = el.parentElement;
+      while (parent && parent !== document.body) {
+        depth++;
+        parent = parent.parentElement;
+      }
+      el.setAttribute('data-depth', depth);
+    });
+  });
+</script>
+*/
