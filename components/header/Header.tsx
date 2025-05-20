@@ -7,7 +7,6 @@ import { Button } from "../ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -15,6 +14,7 @@ import {
 import { AppLink, Logo, ThemeToggle } from "../common";
 import { ROUTES } from "@/app/constants/routes";
 import { MAIN_NAV } from "@/app/constants/navigation";
+import ProfileDropDown from "../profileDropdown/ProfileDropDown";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -40,18 +40,19 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-
-        <ThemeToggle />
-
-        {/* desktop Actions button */}
-
-        <div className="hidden md:block">
-          <AppLink href={ROUTES.LOGIN}>
-            <Button>Login</Button>
-          </AppLink>
-          <AppLink href={ROUTES.SIGNUP}>
-            <Button variant="link">Signup</Button>
-          </AppLink>
+        <div className="flex gap-5">
+          <ThemeToggle />
+          {/* apply conditional rendering on these elements */}
+          <ProfileDropDown />
+          {/* desktop Actions button */}
+          <div className="hidden md:block">
+            <AppLink href={ROUTES.LOGIN}>
+              <Button>Login</Button>
+            </AppLink>
+            <AppLink href={ROUTES.SIGNUP}>
+              <Button variant="link">Signup</Button>
+            </AppLink>
+          </div>
         </div>
 
         {/* mobile Navigation using sheets */}

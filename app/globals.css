@@ -44,6 +44,8 @@
   --color-success: var(--success);
 }
 
+/*  this is default, follow these naming conventions to generate eother themes */
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

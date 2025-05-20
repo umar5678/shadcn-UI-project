@@ -10,6 +10,11 @@ export const ROUTES = {
 
   // Dashboard routes
   DASHBOARD: "/dashboard",
+  INBOX: "/dashboard/inbox",
+  CALENDER: "/dashboard/calender",
+  SEARCH: "/dashboard/search",
+  SETTINGS: "/dashboard/settings",
+  STATS: "/dashboard/stats",
 
   // Disaster specific routes
   EMERGENCY_CONTACTS: "/emergency-contacts",
